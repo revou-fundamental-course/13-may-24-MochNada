@@ -20,6 +20,11 @@
     border: 0px;
 }
 
+#rumus-luas {
+    text-align: center;
+    font-weight: bold;
+}
+
 .rumus-img {
     text-align: center;
 }
