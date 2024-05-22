@@ -12,9 +12,15 @@
             <!--Sambutan-->
             <h1>Welcome to my Calculator</h1>
             <section>
-                <p>
-                    Hey friends, welcome to my triangle calculator website!
-                </p>
+                <p><marquee width="100%" direction="right" height="100px" scrollamount="12">
+                    Hello everyone! My name is Nada from Indonesia and welcome to my simple triangle calculator website!
+                </marquee></p>
+                <table style="width: 100%;">
+                    <tr>
+                        <td>Hari: <div id="date"></div></td>
+                        <td>Waktu: <div id="time"></div></td>
+                    </tr>
+                </table><br>
             </section>
         </header>
 
@@ -26,12 +32,12 @@
                 </h3>
             </div>
 
-            <button type="button" id="switch-keliling">
+            <button type="button" id="switch-keliling" onclick="hideOrShow()">
                 <u>Switch ke Keliling Segitiga</u>
             </button>
         </section>
 
-        <section>
+        <section id="luas-section">
             <!--Konten Atas Luas Segitiga-->
             <section>
             <div class="section-content">
@@ -50,7 +56,7 @@
             <p>t = Tinggi</p>
             </section>
             <hr />
-        </section>
+        
         <section>
             <!--Konten Bawah Luas Segitiga-->
             <header>
@@ -59,19 +65,19 @@
                 </h2>
             </header>
 
-            <form>
+            <form id="luas-segitiga">
                 <section>
                     <div>
                         <label>
                             Alas:
                         </label>
-                    <input/>
+                    <input type="number" min="1" placeholder="Masukkan Alas" id="alas"/>
                     </div>
                     <div>
                         <label>
                             Tinggi:
                         </label>
-                    <input/>
+                    <input type="number" min="1" placeholder="Masukkan Tinggi" id="tinggi"/>
                     </div>
                 </section>
 
@@ -80,10 +86,68 @@
                 <p>Ditanya: ... ?</p>
 
 
-                <button type="button">Hitung</button>
-                <button type="button" id="reset-btn">Reset</button>
+                <button type="button" id="calculate-luas">Hitung</button>
+                <button type="button" id="reset-btn" onclick="reset()">Reset</button>
+                <div style="padding: 10px;">
+                    <p id="hasil-segitiga">Luas:</p>
+                </div>
             </form> 
         </section>
+        </section>
+        <section id="keliling-section">
+            <!--Konten Atas Keliling Segitiga-->
+            <section>
+            <div class="section-content">
+                <h2>Keliling Segitiga</h2>
+            </div>
+            
+            <div class="rumus-img">
+                <img src="https://cdn-web.ruangguru.com/landing-pages/assets/hs/gambar%20alas%20dan%20tinggi%20segitiga.png" alt="Segitiga">
+            </div>
+            
+            <p>Rumus Keliling Segitiga adalah:</p>
+            <p id="rumus-luas">Keliling = Sisi AB + BC + CA</p>
+            </section>
+            <hr />
         
+        <section>
+            <!--Konten Bawah Keliling Segitiga-->
+            <header>
+                <h2>
+                    Hitung Keliling Segitiga
+                </h2>
+            </header>
+
+            <form id="keliling-segitiga">
+                <section>
+                    <div>
+                        <label>
+                            Alas:
+                        </label>
+                    <input type="number" min="1" placeholder="Masukkan Alas" id="alas2"/>
+                    </div>
+                    <div>
+                        <label>
+                            Tinggi:
+                        </label>
+                    <input type="number" min="1" placeholder="Masukkan Tinggi" id="tinggi2"/>
+                    </div>
+                </section>
+
+                <p>Diketahui:</p>
+                <p>K= Sisi + sisi + sisi segitiga
+                <p>Ditanya: ... ?</p>
+
+
+                <button type="button" id="calculate-keliling">Hitung</button>
+                <button type="button" id="reset-btn" onclick="reset2()">Reset</button>
+                <div style="padding: 10px;">
+                    <p id="hasil-segitiga2">Keliling:</p>
+                </div>
+            </form> 
+        </section>
+        </section>
+        
+        <script src="js/script.js"></script>
     </body>
 </html>

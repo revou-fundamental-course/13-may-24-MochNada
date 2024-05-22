@@ -1,5 +1,10 @@
 /* Ini CSS */
 
+table, th, td {
+    color: #081230;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
 .section-content {
     background-color: #081230;
     color: white;
@@ -48,8 +53,14 @@ form>button {
     padding: 8px;
     border-radius: 8px;
     border: 1px dashed darkblue;
-    background-color: #081230;
-    color: azure;
+    background-color: #15ffff;
+    color: #1c2a52;
+    transition-duration: 0.5s;
+}
+
+form>button:hover {
+    background-color: #1c3d91;
+    color: white;
 }
 
 #reset-btn {
@@ -57,6 +68,17 @@ form>button {
     color: #081230;
     position: relative;
     width: 100px;
-    padding: 5px 0px 10px 0px;
-    margin:5px;
+    padding: 10px 5px 10px 0px;
+    margin-left: 10px;
+    transition-duration: 0.5s;
+}
+
+#reset-btn:hover {
+    background-color: red;
+    padding: 5px 0px 5px 0px;
+    color: white;
+}
+
+#keliling-section {
+    display: none;
 }
